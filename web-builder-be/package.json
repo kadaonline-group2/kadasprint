@@ -1,0 +1,34 @@
+{
+  "name": "ai-website-builder-backend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "dev:integration": "npm run build && node scripts/dev-integration-server.mjs",
+    "test:ai-integration": "npm run build && node scripts/check-ai-integration.mjs",
+    "renderer:sync": "node scripts/sync-renderer.mjs --sync",
+    "renderer:check": "node scripts/sync-renderer.mjs --check",
+    "test:renderer-parity": "npm run renderer:check && npm run build && node scripts/check-renderer-parity.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && node scripts/run-tests.mjs",
+    "lint": "eslint .",
+    "build": "tsc",
+    "start": "node dist/src/server.js"
+  },
+  "dependencies": {
+    "ajv": "^8.20.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jszip": "^3.10.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.5.1",
+    "eslint": "^10.10.0",
+    "tsx": "^4.23.13",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.70.0"
+  }
+}

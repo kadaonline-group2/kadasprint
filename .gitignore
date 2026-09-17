@@ -1,0 +1,13 @@
+# Local secrets and Vercel project metadata
+**/.env
+**/.env.*
+!**/.env.example
+**/.vercel/
+
+# Build outputs and local dependencies
+**/node_modules/
+**/dist/
+**/coverage/
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
