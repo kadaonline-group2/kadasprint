@@ -35,3 +35,5 @@ export function createApp(aiServiceClient?: AiServiceClient): express.Express {
 }
 
 export const app = createApp();
+
+export default app;
